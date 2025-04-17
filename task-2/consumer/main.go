@@ -9,22 +9,23 @@ import (
 
 func main() {
 	bootstrapServers := "localhost:9093" // Replace with your Kafka broker address
-	topic := "topic-1"                   // Replace with your Kafka topic
+	topic := "topic-2"                   // Replace with your Kafka topic
 	groupID := "my-consumer-group"       // Consumer group ID
 
 	// SSL configuration
 	sslConfig := &kafka.ConfigMap{
-		"bootstrap.servers":        bootstrapServers,
-		"security.protocol":        "SASL_SSL",
-		"ssl.ca.location":          "../ca.crt",                    // Path to your CA certificate
-		"ssl.certificate.location": "../kafka-1-creds/kafka-1.crt", // Path to your client certificate
-		"ssl.key.location":         "../kafka-1-creds/kafka-1.key", // Path to your client key
-		"ssl.key.password":         "yandex",                       // Password for the client key
-		"group.id":                 groupID,                        // Consumer group ID
-		"auto.offset.reset":        "earliest",                     // Start reading at the earliest message
-		"sasl.mechanism":           "PLAIN",
-		"sasl.username":            "consumer",
-		"sasl.password":            "pass",
+		"bootstrap.servers":                   bootstrapServers,
+		"security.protocol":                   "SASL_SSL",
+		"ssl.ca.location":                     "../ca.crt", // Path to your CA certificate
+		"ssl.keystore.location":               "../kafka-1-creds/kafka.kafka-1.keystore.pkcs12",
+		"ssl.keystore.password":               "your-password",
+		"ssl.key.password":                    "your-password", // Password for the client key
+		"group.id":                            groupID,         // Consumer group ID
+		"auto.offset.reset":                   "earliest",      // Start reading at the earliest message
+		"sasl.mechanism":                      "PLAIN",
+		"sasl.username":                       "consumer",
+		"sasl.password":                       "pass",
+		"enable.ssl.certificate.verification": false,
 	}
 
 	// Create a new consumer
