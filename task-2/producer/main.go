@@ -17,7 +17,7 @@ type User struct {
 
 func main() {
 	bootstrapServers := "localhost:9093" // Replace with your Kafka broker address
-	topic := "topic-2"                   // Replace with your Kafka topic
+	topic := "topic-1"                   // Replace with your Kafka topic
 
 	// SSL and SASL configuration
 	sslConfig := &kafka.ConfigMap{

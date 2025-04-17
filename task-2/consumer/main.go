@@ -9,7 +9,7 @@ import (
 
 func main() {
 	bootstrapServers := "localhost:9093" // Replace with your Kafka broker address
-	topic := "topic-2"                   // Replace with your Kafka topic
+	topic := "topic-1"                   // Replace with your Kafka topic
 	groupID := "my-consumer-group"       // Consumer group ID
 
 	// SSL configuration
