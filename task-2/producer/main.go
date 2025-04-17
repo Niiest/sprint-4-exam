@@ -27,6 +27,9 @@ func main() {
 		"ssl.certificate.location": "../kafka-1-creds/kafka-1.crt", // Path to your client certificate
 		"ssl.key.location":         "../kafka-1-creds/kafka-1.key", // Path to your client key
 		"ssl.key.password":         "yandex",                       // Password for the client key
+		"sasl.mechanism":           "PLAIN",
+		"sasl.username":            "producer",
+		"sasl.password":            "pass",
 	}
 
 	// Create a new producer

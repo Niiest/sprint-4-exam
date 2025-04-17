@@ -18,8 +18,6 @@ func main() {
 		"security.protocol":        "SASL_SSL",
 		"ssl.ca.location":          "../ca.crt",                    // Path to your CA certificate
 		"ssl.certificate.location": "../kafka-1-creds/kafka-1.crt", // Path to your client certificate
-		"ssl.truststore.location":  "../kafka-1-creds/kafka.kafka-1.truststore.jks",
-		"ssl.truststore.password":  "../kafka-1-creds/your-password",
 		"ssl.key.location":         "../kafka-1-creds/kafka-1.key", // Path to your client key
 		"ssl.key.password":         "yandex",                       // Password for the client key
 		"group.id":                 groupID,                        // Consumer group ID

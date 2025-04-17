@@ -4,6 +4,8 @@ cd /bin
 
 kafka-topics --bootstrap-server localhost:9092 --topic topic-1 --create --partitions 3 --replication-factor 2
 
+kafka-topics --bootstrap-server localhost:9092 --topic topic-1 --describe
+
 kafka-topics --bootstrap-server localhost:9092 --topic topic-2 --create --partitions 3 --replication-factor 2
 
 kafka-acls --authorizer-properties zookeeper.connect=zookeeper:2181 --add --allow-principal User:producer --operation Describe --operation Write --topic topic-1
