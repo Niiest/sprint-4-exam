@@ -45,8 +45,9 @@ services:
      KAFKA_DELETE_TOPIC_ENABLE: true
      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "false"
+     KAFKA_ZOOKEEPER_SET_ACL: 'true'
      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
-     KAFKA_SUPER_USERS: "User:admin"
+     KAFKA_SUPER_USERS: "User:admin;User:ANONYMOUS"
      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/jaas/kafka_server_jaas.conf"
      KAFKA_SSL_KEYSTORE_FILENAME: kafka.kafka-1.keystore.pkcs12
      KAFKA_SSL_KEYSTORE_CREDENTIALS: kafka-1_keystore_creds
@@ -81,8 +82,9 @@ services:
      KAFKA_DELETE_TOPIC_ENABLE: true
      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "false"
+     KAFKA_ZOOKEEPER_SET_ACL: 'true'
      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
-     KAFKA_SUPER_USERS: "User:admin"
+     KAFKA_SUPER_USERS: "User:admin;User:ANONYMOUS"
      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/jaas/kafka_server_jaas.conf"
      KAFKA_SSL_KEYSTORE_FILENAME: kafka.kafka-2.keystore.pkcs12
      KAFKA_SSL_KEYSTORE_CREDENTIALS: kafka-2_keystore_creds
@@ -117,8 +119,9 @@ services:
      KAFKA_DELETE_TOPIC_ENABLE: true
      KAFKA_SASL_MECHANISM_INTER_BROKER_PROTOCOL: PLAIN
      KAFKA_ALLOW_EVERYONE_IF_NO_ACL_FOUND: "false"
+     KAFKA_ZOOKEEPER_SET_ACL: 'true'
      KAFKA_SASL_ENABLED_MECHANISMS: PLAIN
-     KAFKA_SUPER_USERS: "User:admin"
+     KAFKA_SUPER_USERS: "User:admin;User:ANONYMOUS"
      KAFKA_OPTS: "-Djava.security.auth.login.config=/etc/kafka/jaas/kafka_server_jaas.conf"
      KAFKA_SSL_KEYSTORE_FILENAME: kafka.kafka-3.keystore.pkcs12
      KAFKA_SSL_KEYSTORE_CREDENTIALS: kafka-3_keystore_creds
